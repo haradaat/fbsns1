@@ -3729,6 +3729,11 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
+javascript@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/javascript/-/javascript-1.0.0.tgz#186c6d8d73fe9dae5cded839de8e60ec7826ec86"
+  integrity sha512-PnTGALRCw+1vqPQj5iE1xxZnEOPraSjIZ9LEZGjqP9I9iyjgRAXN7FYLDgPqZi7PhZxb3oLyYTJBttQpGCrMtg==
+
 jest-worker@^26.5.0:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.6.2.tgz#7f72cbc4d643c365e27b9fd775f9d0eaa9c7a8ed"

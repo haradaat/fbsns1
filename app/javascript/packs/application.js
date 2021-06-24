@@ -11,7 +11,13 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+// Read Sprockets README (https://github.com/rails/XXXXXXXXXXXXXXXXXXXXXX) for details
+// about supported directives.
+//
+//= require rails-ujs
+//= require turbolinks
 //= require jquery/dist/jquery.js
 //= require bootstrap/dist/js/bootstrap.min
 //= require_tree .
 import 'stylesheets/application'
+//= require javascript/stylesheets/application.mjs
