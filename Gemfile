@@ -26,6 +26,9 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'bcrypt'
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'mimemagic', '0.3.7'
 end
 
 group :test do
