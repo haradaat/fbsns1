@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :blogs
+  has_many :users
   validates :name, presence: true
   validates :email, presence: true
   validates :name,  presence: true, length: { maximum: 30 }

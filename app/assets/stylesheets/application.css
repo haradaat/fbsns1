@@ -14,3 +14,16 @@
  *= require_tree .
  *= require_self
  */
+ header{
+    background-color: #0616f8;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+footer{
+    background-color: #0616f8;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+}

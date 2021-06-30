@@ -13,8 +13,9 @@
   <body>
   <header>
       <ul>
-        <li><a href="#">FBSNS</a></li>
-        <li><a href="#">トップページ</a></li>
+        <li><a href="../sessions/new.html">FBSNS</a></li>
+        <li><a href="../blogs/new.html">コメント投稿</a></li>
+        <li><a href="../feeds/new.html">写真投稿</a></li>
       </ul>
     </header>
     <body>
@@ -29,5 +30,8 @@
       <%= link_to "Login", new_session_path %>
     <% end %>
     <%= yield %>
-  </body>
+    <footer>
+        <p>This site is made by Harada Atsushi
+    </footer>
+    </body>
 </html>
