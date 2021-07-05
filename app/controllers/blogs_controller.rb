@@ -7,7 +7,8 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
   def create
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
+    @user = @blog.user.name
     if params[:back]
       render :new
     else
@@ -34,12 +35,13 @@ class BlogsController < ApplicationController
     redirect_to blogs_path, notice:"ブログを削除しました！"
   end
   def confirm
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
+    @user = @blog.user.name
     render :new if @blog.invalid?
   end
   private
   def blog_params
-    params.require(:blog).permit(:content)
+    params.require(:blog).permit(:content, :user_id)
   end
   def set_blog
     @blog = Blog.find(params[:id])
