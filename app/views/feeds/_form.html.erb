@@ -1,4 +1,14 @@
-<%= form_with(model: feed, local: true, url:confirm_feeds_path) do |form| %>
+<%= form_with(model: feed, local: true, url: choose_new_or_edit ) do |form| %>
+  <% if @feed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @feed.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @feed.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
   <div class="field">
     <%= form.label :image %>
     <!-- 確認画面から新規作成画面に戻った時に、 -->
@@ -10,4 +20,9 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+
+<footer class="footer">
+  <!-- 追記 -->
+  <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
+</footer>
 <% end %>

@@ -13,11 +13,11 @@
   <tbody>
     <% @feeds.each do |feed| %>
       <tr>
-        <td><%= feed.image %></td>
+        <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
         <td><%= feed.user.name %></td>
         <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to "ブログを編集する", edit_feed_path(feed.id), data: { confirm: '本当に編集していいですか？' } %></td>
+    <td><%= link_to 'ブログを削除する', feed_path(feed.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
