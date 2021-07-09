@@ -17,7 +17,7 @@
         <td><%= feed.user.name %></td>
         <td><%= link_to 'Show', feed %></td>
         <td><%= link_to "ブログを編集する", edit_feed_path(feed.id), data: { confirm: '本当に編集していいですか？' } %></td>
-    <td><%= link_to 'ブログを削除する', feed_path(feed.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+    <td><%= link_to 'ブログを削除する', feed_path(feed.id), method: :delete ,data: { confirm: '本当に削除してもいいですか？'} %></td>
       </tr>
     <% end %>
   </tbody>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
   get 'sessions/new'
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, only: [:new, :create, :show, :edit ,:update]
+  resources :users, only: [:new, :create, :show, :edit ,:update, :destroy]
   root 'blogs#index'
   resources :blogs do
     collection do

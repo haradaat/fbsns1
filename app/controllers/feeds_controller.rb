@@ -28,14 +28,16 @@ class FeedsController < ApplicationController
   # POST /feeds or /feeds.json
   def create
     @feed = Feed.new(feed_params)
-    
+    @feed.user_id = current_user.id
     if params[:back]
       render :new
     else
     if @feed.save
     redirect_to feeds_path, notice: "写真を投稿しました！"
-    end
-  end
+  else
+    render :new
+end
+end
 end
   # PATCH/PUT /feeds/1 or /feeds/1.json
   def update
@@ -49,7 +51,7 @@ end
   # DELETE /feeds/1 or /feeds/1.json
   def destroy
     @feed.destroy
-    redirect_to feeds_path, notice:"ブログを削除しました！"
+    redirect_to feeds_path, notice: "ブログを削除しました！"
   end
 
   private
