@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-    has_many :blogs
     has_many :feeds
     validates :name, presence: true
     validates :email, presence: true

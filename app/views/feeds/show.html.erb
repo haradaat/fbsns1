@@ -4,6 +4,7 @@
   <strong>Image:</strong>
   <%= image_tag @feed.image.url %>
 </p>
-
+<p class="abc">内容: <%= @feed.content %></p>
 <%= link_to 'Edit', edit_feed_path(@feed) %> |
 <%= link_to 'Back', feeds_path %>
+1

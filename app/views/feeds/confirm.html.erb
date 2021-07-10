@@ -5,6 +5,8 @@
   <%= image_tag(@feed.image.url) if @feed.image && @feed.image.url %>
   
   <%= form.hidden_field :image_cache %>
+  <%= form.hidden_field :content %>
+  <p class="abc">本文:<%= @feed.content %></p>
   <%= form.submit "投稿する" %>
 <% end %>
 
