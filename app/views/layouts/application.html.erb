@@ -11,11 +11,10 @@
   </head>
 
   <body>
+  <div class="container">
   <header>
-      <ul>
-        <li><a href="../sessions/new.html">FBSNS</a></li>
-        <li><a href="../feeds/new.html">写真投稿</a></li>
-      </ul>
+        <li><a href="../feeds" class="title">FBSNS</a></li>
+        <li><a href="../feeds/new.html" class="title">写真投稿</a></li>
     </header>
     <body>
     <% flash.each do |key, value| %>
@@ -29,5 +28,18 @@
       <%= link_to "Login", new_session_path %>
     <% end %>
     <%= yield %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+  <!-- 追記 -->
+  <p>Copyright © 2018 DIVE INC All RIGHTS RESERVED.</p>
+</footer>
     </body>
+    </div>
 </html>
