@@ -27,6 +27,9 @@
     position: relative;
     min-height: 100%;
     position: relative;
+    padding-bottom: 150px;
+    padding-left: 0;
+    padding-right: 0;
   }
   li {
     width: 100%;  

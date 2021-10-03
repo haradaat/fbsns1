@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <header class="header clearfix">
 <h1>Feeds</h1>
 </header>
@@ -15,7 +14,9 @@
     <% @feeds.each do |feed| %>
     <div class="feed">
       <tr>
-        <td><%= image_tag(feed.image.url) if feed.image && feed.image.url %></td>
+        <% if feed.image && feed.image.url %>
+          <td><%= image_tag feed.image.url, class: "img"  %></td>
+        <% end %>
         <td><%= feed.user.name %></td>
         <td><%= feed.content %></td>
         <td><%= link_to 'Show', feed %></td>
