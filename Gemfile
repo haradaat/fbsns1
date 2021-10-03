@@ -24,7 +24,6 @@ group :development do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry-rails'
   gem 'bcrypt'
   gem 'carrierwave'
   gem 'mini_magick'
